@@ -1,0 +1,13 @@
+@shipping
+Feature: Getting shipping details from the customer
+	Getting shipping details from the customer to deliver the product
+	Scenario: For valid customer create new Account
+		Given customer address details
+		When select the address from the options
+	  Then navigate to the next page
+		
+	Scenario: For Invalid customer
+		For invalid customer details throw error message
+		Given Customer details
+		When Invalid Customer
+		Then throw 'Invalid Customer' error message
